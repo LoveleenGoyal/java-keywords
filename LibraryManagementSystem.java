@@ -28,8 +28,6 @@ class Book {
         }
 
     }
-
-
 }
 
 public class LibraryManagementSystem {
@@ -44,6 +42,19 @@ public class LibraryManagementSystem {
         System.out.println();
         System.out.println("Book 2:");
         book2.displayBookDetails();
-
     }
 }
+
+/*
+Library Name: Central Library
+----------------------
+Book 1:
+Title: 1984
+Author: George Orwell
+ISBN: 1234567890
+
+Book 2:
+Title: To Kill a Mockingbird
+Author: Harper Lee
+ISBN: 0987654321
+*/
