@@ -1,4 +1,4 @@
-class Student {
+class UniStudent {
     // Static variable
     private static String universityName = "Chitkara University";
     private static int totalStudents = 0;
@@ -9,7 +9,7 @@ class Student {
     private String grade;
 
     // Constructor
-    public Student(int rollNumber, String name, String grade) {
+    public UniStudent(int rollNumber, String name, String grade) {
         this.rollNumber = rollNumber;
         this.name = name;
         this.grade = grade;
@@ -28,7 +28,7 @@ class Student {
 
     // Method to display student details
     public  void displayStudentDetails() {
-        if(this instanceof Student) {
+        if(this instanceof UniStudent) {
             System.out.println("Roll Number: " + rollNumber);
             System.out.println("Name: " + name);
             System.out.println("Grade: " + grade);
@@ -37,10 +37,10 @@ class Student {
 }
 public class UniversityManagement {
     public static void main(String[] args) {
-        Student s1 = new Student(1001, "Loveleen Goyal", "A+");
-        Student s2 = new Student(1002, "Yagyata Sharma", "A");
+        UniStudent s1 = new UniStudent(1001, "Loveleen Goyal", "A+");
+        UniStudent s2 = new UniStudent(1002, "Yagyata Sharma", "A");
 
-        Student.displayUniversityName();
+        UniStudent.displayUniversityName();
         System.out.println("---------------------------");
         System.out.println("Student 1:");
         s1.displayStudentDetails();
@@ -48,7 +48,7 @@ public class UniversityManagement {
         s2.displayStudentDetails();
 
         System.out.println();
-        Student.displayTotalStudents();
+        UniStudent.displayTotalStudents();
     }
 }
 
