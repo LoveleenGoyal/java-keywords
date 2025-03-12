@@ -1,4 +1,4 @@
-class Employee {
+class CompanyEmployee {
     // Static variables
     private static String companyName = "Capgemini";
     private static int totalEmployees = 0;
@@ -9,7 +9,7 @@ class Employee {
     private String designation;
 
     // Constructor
-    public Employee(String name, int id, String designation) {
+    public CompanyEmployee(String name, int id, String designation) {
         this.name = name;
         this.id = id;
         this.designation = designation;
@@ -28,7 +28,7 @@ class Employee {
 
     // Method to display employee details
     public void displayEmployeeDetails() {
-        if (this instanceof Employee) { // Using 'instanceof' to check object type
+        if (this instanceof CompanyEmployee) { // Using 'instanceof' to check object type
             System.out.println("Name: " + name);
             System.out.println("Employee ID: " + id);
             System.out.println("Designation: " + designation);
@@ -37,10 +37,10 @@ class Employee {
 }
 public class EmployeeManagementSystem {
     public static void main(String[] args) {
-        Employee emp1 = new Employee("Loveleen Goyal", 101, "Software Engineer");
-        Employee emp2 = new Employee("Yagyata Sharma", 102, "Data Analyst");
+        CompanyEmployee emp1 = new CompanyEmployee("Loveleen Goyal", 101, "Software Engineer");
+        CompanyEmployee emp2 = new CompanyEmployee("Yagyata Sharma", 102, "Data Analyst");
 
-        Employee.displayCompany();
+        CompanyEmployee.displayCompany();
         System.out.println("--------------------------");
 
         System.out.println("Employee 1: ");
@@ -49,7 +49,7 @@ public class EmployeeManagementSystem {
         emp2.displayEmployeeDetails();
 
         System.out.println("--------------------------\n");
-        Employee.displayTotalEmployees();
+        CompanyEmployee.displayTotalEmployees();
 
     }
 
