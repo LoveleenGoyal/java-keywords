@@ -1,6 +1,7 @@
 class Student {
     // Static variable
     private static String universityName = "Chitkara University";
+    private static int totalStudents = 0;
 
     // Instance variables
     private final int rollNumber;
@@ -12,11 +13,17 @@ class Student {
         this.rollNumber = rollNumber;
         this.name = name;
         this.grade = grade;
+        totalStudents++; // Increment
     }
 
     // Method to display university name
     public static void displayUniversityName() {
         System.out.println("University Name: " + universityName);
+    }
+
+    // Method to display Total Students
+    public static void displayTotalStudents() {
+        System.out.println("Total Students: " + totalStudents);
     }
 
     // Method to display student details
@@ -39,6 +46,9 @@ public class UniversityManagement {
         s1.displayStudentDetails();
         System.out.println("\nStudent 2:");
         s2.displayStudentDetails();
+
+        System.out.println();
+        Student.displayTotalStudents();
     }
 }
 
@@ -54,4 +64,6 @@ Student 2:
 Roll Number: 1002
 Name: Yagyata Sharma
 Grade: A
+
+Total Students: 2
 */
