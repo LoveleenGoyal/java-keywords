@@ -1,4 +1,4 @@
-class BankAccount {
+class BankAccounts {
     // Static variable shared across all accounts
     private static String bankName = "ABC Bank";
     private static int totalAccounts = 0;
@@ -9,7 +9,7 @@ class BankAccount {
     private double balance;
 
     // Constructor
-    public BankAccount(int accountNumber, String accountHolderName, double balance) {
+    public BankAccounts(int accountNumber, String accountHolderName, double balance) {
         this.accountNumber = accountNumber;
         this.accountHolderName = accountHolderName;
         this.balance = balance;
@@ -17,7 +17,7 @@ class BankAccount {
     }
 
     public void displayAccountDetails() {
-        if(this instanceof BankAccount) {
+        if(this instanceof BankAccounts) {
             System.out.println("Bank Name: " + bankName);
             System.out.println("Account Number: " + accountNumber);
             System.out.println("Account Holder: " + accountHolderName);
@@ -33,8 +33,8 @@ class BankAccount {
 // Main class to test the BankAccount class
 public class BankAccountSystem {
     public static void main(String[] args) {
-        BankAccount acc1 = new BankAccount(1001, "Loveleen", 500000);
-        BankAccount acc2 = new BankAccount(1002, "Yagyata", 300000);
+        BankAccounts acc1 = new BankAccounts(1001, "Loveleen", 500000);
+        BankAccounts acc2 = new BankAccounts(1002, "Yagyata", 300000);
 
         System.out.println("====Account 1====");
         acc1.displayAccountDetails();
@@ -42,8 +42,21 @@ public class BankAccountSystem {
         acc2.displayAccountDetails();
 
         System.out.println();
-        BankAccount.getTotalAccounts();
+        BankAccounts.getTotalAccounts();
     }
-
-
 }
+
+/*====Account 1====
+Bank Name: ABC Bank
+Account Number: 1001
+Account Holder: Loveleen
+Balance: 500000.0
+
+====Account 2====
+Bank Name: ABC Bank
+Account Number: 1002
+Account Holder: Yagyata
+Balance: 300000.0
+
+Total Bank Accounts: 2
+*/
