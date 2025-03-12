@@ -1,4 +1,4 @@
-class Book {
+class LibraryBook {
     // Static variables shared among all books
     public static String libraryName = "Central Library";
 
@@ -8,7 +8,7 @@ class Book {
     private final String ISBN;
 
     // Constructor
-    public Book(String ISBN, String title, String author) {
+    public LibraryBook(String ISBN, String title, String author) {
         this.title = title;
         this.author = author;
         this.ISBN = ISBN;
@@ -21,7 +21,7 @@ class Book {
 
     // Method to display book details
     public void displayBookDetails() {
-        if (this instanceof Book) {
+        if (this instanceof LibraryBook) {
             System.out.println("Title: " + title);
             System.out.println("Author: " + author);
             System.out.println("ISBN: " + ISBN);
@@ -32,10 +32,10 @@ class Book {
 
 public class LibraryManagementSystem {
     public static void main(String[] args) {
-        Book book1 = new Book("1234567890", "1984", "George Orwell" );
-        Book book2 = new Book("0987654321", "To Kill a Mockingbird", "Harper Lee" );
+        LibraryBook book1 = new LibraryBook("1234567890", "1984", "George Orwell" );
+        LibraryBook book2 = new LibraryBook("0987654321", "To Kill a Mockingbird", "Harper Lee" );
 
-        Book.displayLibraryName();
+        LibraryBook.displayLibraryName();
         System.out.println("----------------------");
         System.out.println("Book 1:");
         book1.displayBookDetails();
